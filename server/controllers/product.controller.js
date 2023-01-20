@@ -14,3 +14,17 @@ module.exports.createProduct = (req, res) => {
         .then((product) => console.log("Product created succesfully ", product))
         .catch((error) => console.log("Something went wrong (CreateProduct)", error));
 }
+
+//Get All
+module.exports.getAllProducts = (req, res) => {
+    Product.find({})
+        .then(products => res.json(products))
+        .catch((error) => console.log("Something went wrong (getAllProducts)", error));
+}
+
+//Get one product
+module.exports.getOneProduct = (req, res) => {
+    Product.findById(req.params.id)
+        .then(product => res.json(product))
+        .catch((error) => console.log("Something went wrong (getAllProducts)", error));
+}

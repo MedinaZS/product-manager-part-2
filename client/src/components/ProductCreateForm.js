@@ -24,7 +24,7 @@ const ProductCreateForm = () => {
     }
 
     return (
-        <form className='mt-4' onSubmit={onSubmitHandler}>
+        <form className='text-center my-5 mx-auto' onSubmit={onSubmitHandler} style={{ width: '350px' }}>
             <h1>Product Manager</h1>
 
             <div className='mt-4'>
